@@ -1,0 +1,45 @@
+footer {
+    background-color: $dark;
+    padding-top: 1.8rem;
+}
+
+.footer-nav {
+    width: max-content;
+    margin: 0 auto;
+
+    .logo {
+        width: 200px;
+    }
+
+    .menu {
+        margin-top: 1rem;
+
+        &-item {
+            padding: 1rem 1.7rem;
+            text-align: center;
+        }
+
+        &-link {
+            color: $gray;
+            font-size: $mobile-font;
+            text-transform: uppercase;
+            font-weight: $fw-medium;
+        }
+    }
+}
+
+.social-icons {
+    @include flex();
+    width: 100px;
+    margin: 2rem auto;
+
+    a {
+        color: $gray;
+    }
+}
+
+.copyright {
+    background-color: $light;
+    padding: 1rem 1.8rem;
+    text-align: center;
+}

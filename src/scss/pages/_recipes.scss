@@ -1,0 +1,24 @@
+.search-recipes {
+    span {
+        font-size: $mobile-font;
+        color: $light;
+        display: block;
+        font-weight: $fw-medium;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .btn-primary {
+        margin: 0 auto;
+    }
+}
+
+.all-recipes {
+    background-color: $gray;
+    padding: 3rem 0;
+
+    h2 {
+        text-align: center;
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,20 @@
+.btn {
+    width: max-content;
+    display: block;
+    padding: .7em 1.3em;
+    text-transform: uppercase;
+    font-weight: $fw-medium;
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: $primary-color;
+    color: $light;
+}
+
+.btn-secondary {
+    @extend .btn;
+    background-color: $light;
+    color: $primary-color;
+    font-weight: $fw-bold;
+}

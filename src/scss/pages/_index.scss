@@ -1,0 +1,39 @@
+.backdrop {
+    background-color: rgba($dark, .7);
+}
+
+.hero {
+    background: url(../images/hero.jpg) bottom center / cover no-repeat;
+
+    .backdrop {
+        padding: 8rem 1.8rem;
+    }
+
+    p {
+        color: set-text-color($dark);
+        margin: 1em 0 1.7em;
+    }
+}
+
+.highlights {
+    padding: 3rem 0;
+    background-color: $gray;
+
+    h2 {
+        text-align: center;
+        color: $primary-color;
+    } 
+}
+
+
+// banner section
+.banner {
+    background: url(../images/banner.jpg) 0% 75% / cover no-repeat;
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 7rem 0;
+        text-align: center;
+    }
+}
+

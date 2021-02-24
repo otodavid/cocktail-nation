@@ -1,0 +1,16 @@
+form {
+    padding: 1rem 0;
+
+    input, textarea {
+        padding: .7em 1em;
+        width: 100%;
+        font-weight: $fw-medium;
+        outline: 0;
+        border: 0;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-weight: $fw-normal;
+    }
+}

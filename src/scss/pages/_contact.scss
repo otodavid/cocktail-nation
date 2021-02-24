@@ -1,0 +1,54 @@
+.contact {
+    // padding: 2rem 0;
+
+    &-form {
+        padding: 3rem 1.8rem;
+        background-color: $gray;
+
+        h1 {
+            color: $dark;
+            text-align: center;
+        }
+
+        p {
+            color: $primary-color;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: $fw-normal;
+        }
+
+        input, textarea {
+            margin: 1rem 0 1.5rem;
+        }
+
+        .btn-primary {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    &-info {
+        background-color: $primary-color;
+        color: $light;
+        padding: 3rem 1.8rem;
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .socials {
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            margin: 0;
+        }
+    }
+}

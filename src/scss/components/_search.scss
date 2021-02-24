@@ -1,0 +1,30 @@
+.search-recipes {
+    background: url(../images/search.jpg) center / cover no-repeat;
+
+    .backdrop {
+        padding: 3rem 1.8rem;
+    }
+
+    h2 {
+        color: $light;
+        text-align: center;
+    }
+
+    label {
+        position: relative;
+    }
+
+    #search:focus {
+        box-shadow: 0 0 0 2px rgba($dark, .7), 0 0 0 3px $light;
+        }
+
+    .icon {
+        position: absolute;
+        top: -.7em;
+        right: 0.2rem;
+        background-color: $primary-color;
+        display: block;
+        padding: .8em;
+        color: $light;
+    }
+}
