@@ -1,0 +1,7 @@
+# .gitignore
+
+# API Keys
+/dist/js/apiKey.js
+
+# dependecies
+/node_modules

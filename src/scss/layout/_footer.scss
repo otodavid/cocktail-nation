@@ -1,18 +1,39 @@
 footer {
     background-color: $dark;
     padding-top: 1.8rem;
+
+    @include media-lg {
+        @include flex();
+        padding-top: 2rem;
+    }
 }
 
 .footer-nav {
     width: max-content;
     margin: 0 auto;
 
+    @include media-lg {
+        @include flex();
+        margin: 0;
+        margin-left: 10%;
+    }
+
     .logo {
         width: 200px;
+
+        @include media-lg {
+            width: 150px;
+        }
     }
 
     .menu {
         margin-top: 1rem;
+
+        @include media-lg {
+            @include flex();
+            margin-top: 0;
+            margin-left: 4rem;
+        }
 
         &-item {
             padding: 1rem 1.7rem;
@@ -23,7 +44,15 @@ footer {
             color: $gray;
             font-size: $mobile-font;
             text-transform: uppercase;
-            font-weight: $fw-medium;
+            font-weight: $fw-light;
+
+            @include media-lg {
+                font-size: .8rem;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
         }
     }
 }
@@ -33,8 +62,25 @@ footer {
     width: 100px;
     margin: 2rem auto;
 
+    @include media-lg {
+        margin: 0;
+        margin-right: 10%;
+        width: 80px;
+    }
+
     a {
         color: $gray;
+        transition: .4s ease-in-out;
+        font-size: 2rem;
+
+        @include media-lg {
+            font-size: 1.5rem;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
     }
 }
 
@@ -42,4 +88,11 @@ footer {
     background-color: $light;
     padding: 1rem 1.8rem;
     text-align: center;
+
+    @include media-lg {
+        flex: 1 0 100%;
+        padding: 1rem;
+        margin-top: 2rem;
+        font-size: .8rem;
+    }
 }

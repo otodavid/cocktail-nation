@@ -1,10 +1,14 @@
 form {
     padding: 1rem 0;
 
+    label {
+        display: block;
+    }
+
     input, textarea {
-        padding: .7em 1em;
+        padding: 1em 1.5em;
         width: 100%;
-        font-weight: $fw-medium;
+        font-weight: $fw-normal;
         outline: 0;
         border: 0;
     }

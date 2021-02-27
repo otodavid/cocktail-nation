@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>CockTail Nation | Home</title>
-    
+
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -38,7 +40,8 @@
                 <div class="backdrop">
                     <h1>better <span>cocktails</span> at your home</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloribus autem iste. Ipsum, earum, laborum quos corporis quam nulla doloribus velit perferendis magnam alias deleniti, reiciendis vitae voluptatem rem minus!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloribus autem iste. Ipsum, earum,
+                        laborum quos corporis quam nulla doloribus velit perferendis
                     </p>
                     <a href="recipes.html" class="btn-primary">get recipes</a>
                 </div>
@@ -46,13 +49,20 @@
 
             <section class="search-recipes">
                 <div class="backdrop">
-                    <h2>Search for your favourite cocktail</h2>
-                    <form action="index.html" method="GET">
-                        <label for="search">
-                            <input type="text" id="search" name="search" placeholder="Find by name">
-                            <i class="fas fa-search icon" aria-hidden="true"></i>
-                        </label>
-                    </form>
+                    <div>
+                        <h2>Search for your favourite cocktail</h2>
+                        <form action="index.html" method="GET">
+                            <label for="search">
+                                <input type="text" id="search" name="search" placeholder="Find by name">
+                                <i class="fas fa-search icon" aria-hidden="true"></i>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="content">
+                        <div class="recipes empty">
+
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -64,7 +74,7 @@
                         <img src="./images/recipe1.jpg" alt="first recipe highlight">
                         <figcaption>
                             <p class="recipe-name">Magarita</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
+                            <a href="recipes.html" class="btn-secondary">View Recipe</a>
                         </figcaption>
                     </figure>
 
@@ -128,10 +138,10 @@
 
             <div class="social-icons">
                 <a href="">
-                    <i class="fab fa-instagram fa-2x"></i>
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="">
-                    <i class="fab fa-twitter fa-2x"></i>
+                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
 
@@ -139,9 +149,32 @@
                 &copy; 2021 Cocktail Nation
             </div>
         </footer>
+
+        <div class="modal-wrapper backdrop">
+            <div class="modal">
+                <button type="button" class="close">
+                    close
+                </button>
+                <h2 class="name">TITLE</h2>
+                <div class="modal-image">
+                    <img src="" alt="">
+                </div>
+                <div class="modal-content">
+                    <h3>Steps</h3>
+                    <p class="steps">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deserunt dolore natus totam
+                        exercitationem placeat nobis voluptatibus quam soluta nihil obcaecati animi possimus magni quod
+                        labore, commodi officia minima consectetur.</p>
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients"></ul>
+                    <button type="button" class="btn-primary">Copy</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script src="https://kit.fontawesome.com/969093e135.js" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
+
 </html>

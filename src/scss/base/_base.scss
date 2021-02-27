@@ -8,7 +8,11 @@
 body {
     font-family: $font-stack;
     font-size: $mobile-font;
-    line-height: 1.4;
+    line-height: 1.5;
+
+    @include media-lg {
+        font-size: $desktop-font;
+    }
 }
 
 a {
@@ -37,6 +41,11 @@ h1 {
     text-transform: uppercase;
     color: $light;
 
+    @include media-lg {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
     span {
         color: $primary-color;
     }
@@ -45,8 +54,18 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-transform: uppercase;
+
+    @include media-lg {
+        font-size: 1.8rem;
+    }
 }
 
 p {
     margin: 1em 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
 }

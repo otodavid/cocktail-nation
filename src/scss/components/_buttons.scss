@@ -1,15 +1,22 @@
 .btn {
     width: max-content;
     display: block;
-    padding: .7em 1.3em;
+    padding: 1em 2em;
     text-transform: uppercase;
     font-weight: $fw-medium;
+    font-size: $mobile-font;
 }
 
 .btn-primary {
     @extend .btn;
     background-color: $primary-color;
     color: $light;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+        background-color: $light;
+    }
 }
 
 .btn-secondary {

@@ -6,3 +6,45 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+// generic transition
+@mixin transition($duration) {
+    transition: all $duration ease-out;
+}
+
+
+// MEDIA QUERIES
+// small devices like galaxy fold
+@mixin media-xs {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+// phablets
+@mixin media-sm {
+    @media screen and (min-width:600px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// tablets
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// laptops 
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+// desktops
+@mixin media-xl {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}

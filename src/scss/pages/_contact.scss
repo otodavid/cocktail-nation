@@ -1,9 +1,22 @@
 .contact {
     // padding: 2rem 0;
 
+    @include media-lg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & > div {
+            padding: 5rem 10%;
+        }
+    }
+
     &-form {
         padding: 3rem 1.8rem;
         background-color: $gray;
+
+        @include media-lg {
+            // flex: 1 0 50%;
+        }
 
         h1 {
             color: $dark;
@@ -35,6 +48,10 @@
         color: $light;
         padding: 3rem 1.8rem;
 
+        @include media-lg {
+            @include flex(center, flex-start, column)
+        }
+
         h2 {
             margin-bottom: 1em;
         }
@@ -49,6 +66,10 @@
 
         .social-icons {
             margin: 0;
+
+            a:hover {
+                color: $dark;
+            }
         }
     }
 }

@@ -17,6 +17,10 @@
     background-color: $gray;
     padding: 3rem 0;
 
+    @include media-lg {
+        padding: 5rem;
+    }
+
     h2 {
         text-align: center;
         color: $primary-color;
