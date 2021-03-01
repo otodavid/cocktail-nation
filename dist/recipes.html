@@ -38,94 +38,36 @@
         <main>
             <section class="search-recipes">
                 <div class="backdrop">
-                    <h2>Search for your favourite cocktail</h2>
-                    <form action="index.html" method="GET">
-                        <label for="search">
-                            <input type="text" id="search" name="search" placeholder="Find by name">
-                            <i class="fas fa-search icon" aria-hidden="true"></i>
-                        </label>
-                    </form>
-                    <span>OR</span>
-                    <button type="button" id="search-ingredient" class="btn-primary">Search by ingredient</button>
+                    <div>
+                        <h2>Search for your favourite cocktail</h2>
+                        <form action="index.html" method="GET">
+                            <label for="search">
+                                <input type="text" id="search" name="search" placeholder="Search by name">
+                                <i class="fas fa-search icon" aria-hidden="true"></i>
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="content">
+                        <div class="recipes empty">
+
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="all-recipes">
-                <h2>all recipes</h2>
+            <section class="recipes-container latest">
+                <h2>Latest Cocktail Recipes</h2>
                 <div class="recipes">
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe1.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Magarita</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
 
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe2.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Strawberry Saringa</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe3.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Bluberry Vodka</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe4.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Mojito</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe1.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Magarita</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe2.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Strawberry Saringa</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe3.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Bluberry Vodka</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
-
-                    <!-- recipe item -->
-                    <figure class="recipe-item">
-                        <img src="./images/recipe4.jpg" alt="first recipe highlight">
-                        <figcaption>
-                            <p class="recipe-name">Mojito</p>
-                            <a href="recipe.html" class="btn-secondary">View Recipe</a>
-                        </figcaption>
-                    </figure>
                 </div>
-                <a href="recipes.html" class="btn-primary">View More</a>
+            </section>
+
+            <section class="recipes-container popular">
+                <h2>Popular Cocktails</h2>
+                <div class="recipes">
+                   
+                </div>
             </section>
 
         </main>

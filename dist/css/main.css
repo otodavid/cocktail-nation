@@ -1065,18 +1065,18 @@ form textarea::placeholder {
   margin: 0 auto;
 }
 
-.highlights {
+.recipes-container {
   padding: 3rem 0;
   background-color: #EEEEEE;
 }
 
 @media screen and (min-width: 1024px) {
-  .highlights {
+  .recipes-container {
     padding: 5rem;
   }
 }
 
-.highlights h2 {
+.recipes-container h2 {
   text-align: center;
   color: #E63B2E;
 }
@@ -1119,18 +1119,18 @@ form textarea::placeholder {
   margin: 0 auto;
 }
 
-.all-recipes {
+.recipes-container {
   background-color: #EEEEEE;
   padding: 3rem 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .all-recipes {
+  .recipes-container {
     padding: 5rem;
   }
 }
 
-.all-recipes h2 {
+.recipes-container h2 {
   text-align: center;
   color: #E63B2E;
 }
