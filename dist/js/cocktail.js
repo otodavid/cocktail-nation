@@ -20,19 +20,19 @@ class Cocktails {
         // change endpoint depending on the type of information to retrieve
         switch (retrievalType) {
             case 'popular':
-                // endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/popular.php`;
+                endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/popular.php`;
                 break;
             
             case 'latest':
-                // endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/latest.php`;
+                endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/latest.php`;
                 break;
 
             case 'random':
-                // endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/randomselection.php`;
+                endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/randomselection.php`;
                 break;
 
             default:
-                // endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/latest.php`;
+                endpoint = `https://www.thecocktaildb.com/api/json/v2/${COCKTAILDB_API_KEY}/latest.php`;
                 break;
         }
 
