@@ -1,0 +1,87 @@
+.modal-wrapper {
+    @include flex(center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem 0;
+    visibility: hidden;
+    opacity: 0;
+    will-change: contents;
+    @include transition(.5s);
+
+    &.open {
+        transform: translate(0);
+        opacity: 1;
+        visibility: visible;
+    
+        .modal {
+            transform: translate(0vw);
+        }
+    }
+}
+
+.modal {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    position: relative;
+    padding: 1.5rem 2rem;
+    max-height: 100%;
+    overflow-y: auto;
+    // @include flex($align: flex-start);
+    
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        // color: $light;
+    }
+
+    .name {
+        margin: 2rem 0 1rem;
+        text-align: center;
+        color: $red;
+        font-weight: $fw-boldest;
+    }
+
+    &-image {
+        // flex: 0 1 45%;
+        height: 200px;
+        
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-content {
+        flex: 1 0 100%;
+        margin-top: 2rem;
+
+        h3 {
+            font-size: 1.25rem;
+            color: $red;
+            margin: 2rem 0 .5rem;
+            // font-weight: $fw-bold;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: decimal;
+            list-style-position: inside;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+    }
+}

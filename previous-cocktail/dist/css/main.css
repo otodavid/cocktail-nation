@@ -1,0 +1,1412 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Exo 2", Roboto, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #FBFFFE;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+}
+
+h1 span {
+  color: #E59500;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  margin: 1em 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  height: 90px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: auto;
+  }
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  width: 100%;
+  background-color: #1B1B1E;
+  padding: .8rem 1.7rem .8rem .5rem;
+  z-index: 3;
+  height: 90px;
+  overflow: hidden;
+  -webkit-transition: height .4s ease;
+  transition: height .4s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav {
+    position: static;
+    height: auto;
+    padding: 1% 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header-nav.open {
+  height: 100vh;
+}
+
+.header-nav .logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 150px;
+          flex: 0 1 150px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .logo {
+    -ms-flex-preferred-size: 170px;
+        flex-basis: 170px;
+  }
+}
+
+.header-nav .menu {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: absolute;
+  top: 95px;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .menu {
+    position: static;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 350px;
+            flex: 0 1 350px;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header-nav .menu-item {
+  padding: 1rem 1.7rem;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .menu-item {
+    padding: 1.3rem;
+  }
+}
+
+.header-nav .menu-item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .menu-item {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.header-nav .menu-link {
+  color: #EEEEEE;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .menu-link {
+    font-size: 1rem;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+  }
+  .header-nav .menu-link:hover {
+    color: #E63B2E;
+  }
+}
+
+.header-nav .menu-toggle {
+  position: relative;
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  outline: 0;
+}
+
+.header-nav .menu-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #FBFFFE;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.header-nav .menu-toggle::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.header-nav .menu-toggle.open::before {
+  -webkit-transform: translate(0px, 9px) rotateZ(45deg);
+          transform: translate(0px, 9px) rotateZ(45deg);
+}
+
+.header-nav .menu-toggle.open::after {
+  width: 30px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+footer {
+  background-color: #1B1B1E;
+  padding-top: 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 2rem;
+  }
+}
+
+.footer-nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    margin-left: 10%;
+  }
+}
+
+.footer-nav .logo {
+  width: 200px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-nav .logo {
+    width: 150px;
+  }
+}
+
+.footer-nav .menu {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0;
+    margin-left: 4rem;
+  }
+}
+
+.footer-nav .menu-item {
+  padding: 1rem 1.7rem;
+  text-align: center;
+}
+
+.footer-nav .menu-link {
+  color: #EEEEEE;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-nav .menu-link {
+    font-size: .8rem;
+  }
+}
+
+.footer-nav .menu-link:hover {
+  color: #E63B2E;
+}
+
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .social-icons {
+    margin: 0;
+    margin-right: 10%;
+    width: 80px;
+  }
+}
+
+.social-icons a {
+  color: #EEEEEE;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+  .social-icons a:hover {
+    color: #E63B2E;
+  }
+}
+
+.copyright {
+  background-color: #FBFFFE;
+  padding: 1rem 1.8rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .copyright {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: .8rem;
+  }
+}
+
+.btn, .btn-primary, .btn-secondary {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  padding: .8em 1.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #E63B2E;
+  color: #FBFFFE;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-primary:hover {
+  background-color: #c41116;
+}
+
+.btn-secondary {
+  background-color: #FBFFFE;
+  color: #1B1B1E;
+  font-weight: 700;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-secondary:hover {
+  background-color: #FBFFFE;
+  color: #E63B2E;
+}
+
+form {
+  padding: .5rem 0;
+}
+
+form label {
+  display: block;
+}
+
+form input, form textarea {
+  padding: .8em 1.3em;
+  width: 100%;
+  font-weight: 500;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+}
+
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+  font-weight: 500;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+  font-weight: 500;
+}
+
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+  font-weight: 500;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  font-weight: 500;
+}
+
+form .alert {
+  font-weight: 700;
+  color: #FBFFFE;
+  font-size: .7rem;
+  padding-left: .5rem;
+  display: none;
+}
+
+form .alert.active {
+  display: block;
+}
+
+.home .search-recipes {
+  background: #EEEEEE;
+}
+
+.home .search-recipes .backdrop {
+  padding: 0;
+}
+
+.home .search-recipes .content {
+  margin: 0;
+}
+
+.search-recipes .backdrop {
+  padding: 3rem 10%;
+}
+
+@media screen and (min-width: 1024px) {
+  .search-recipes .backdrop {
+    padding: 5rem;
+  }
+}
+
+.search-recipes h2 {
+  color: #1B1B1E;
+  text-align: center;
+  max-width: 400px;
+  margin: .5rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .search-recipes h2 {
+    max-width: 500px;
+  }
+}
+
+.search-recipes label {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-recipes #search {
+  padding-right: 3.5em;
+}
+
+.search-recipes #search:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(27, 27, 30, 0.7), 0 0 0 6px #FBFFFE;
+          box-shadow: 0 0 0 3px rgba(27, 27, 30, 0.7), 0 0 0 6px #FBFFFE;
+}
+
+.search-recipes .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1B1B1E;
+  display: block;
+  padding: .9em 1.1em;
+  color: #FBFFFE;
+  cursor: pointer;
+}
+
+.search-recipes .content {
+  margin-top: 2rem;
+  background-color: #FBFFFE;
+}
+
+.search-recipes .content .recipes.empty {
+  padding: 0;
+}
+
+#recipes.active .content {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+#recipes.active .recipes-container {
+  padding: 3rem 0;
+}
+
+#recipes .search-recipes {
+  padding: 2rem 7%;
+}
+
+#recipes .search-recipes label {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#recipes .search-recipes input {
+  border-radius: 0;
+  border-bottom: 2px solid #1B1B1E;
+  outline: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#recipes .search-recipes input:focus {
+  border-bottom: 2px solid #E63B2E;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#recipes .search-recipes .btn-primary {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+#recipes .search-recipes .content {
+  padding: 0;
+  margin-top: 0;
+}
+
+.recipes {
+  padding: 2rem 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 30px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipes {
+    padding: 8rem;
+    gap: 30px;
+  }
+}
+
+.recipes + .btn-primary {
+  width: 150px;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.recipe-item {
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipe-item:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background: -webkit-gradient(linear, right top, left top, from(red), to(blue));
+    background: linear-gradient(to left, red, blue);
+    background: red;
+  }
+  .recipe-item:hover .btn-secondary {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-box-shadow: 0px 0px 0 200px rgba(27, 27, 30, 0.7);
+            box-shadow: 0px 0px 0 200px rgba(27, 27, 30, 0.7);
+  }
+}
+
+.recipe-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.recipe-item figcaption {
+  -moz-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -1px;
+  left: 0;
+  background-color: rgba(27, 27, 30, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recipe-item figcaption .hide {
+  display: none;
+}
+
+.recipe-item figcaption .btn-secondary {
+  position: absolute;
+  top: -100px;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: background-color color .3s ease, -webkit-box-shadow .5s ease;
+  transition: background-color color .3s ease, -webkit-box-shadow .5s ease;
+  transition: background-color color .3s ease, box-shadow .5s ease;
+  transition: background-color color .3s ease, box-shadow .5s ease, -webkit-box-shadow .5s ease;
+}
+
+.recipe-item figcaption .btn-secondary:hover {
+  background-color: #E63B2E;
+  color: #FBFFFE;
+}
+
+.recipe-name {
+  color: #FBFFFE;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipe-name {
+    font-size: 1.1rem;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.modal-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem 0;
+  visibility: hidden;
+  opacity: 0;
+  will-change: contents;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.modal-wrapper.open {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper.open .modal {
+  -webkit-transform: translate(0vw);
+          transform: translate(0vw);
+}
+
+.modal {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  position: relative;
+  padding: 1.5rem 2rem;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+.modal .name {
+  margin: 2rem 0 1rem;
+  text-align: center;
+  color: #E63B2E;
+  font-weight: 800;
+}
+
+.modal-image {
+  height: 200px;
+}
+
+.modal-image img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modal-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin-top: 2rem;
+}
+
+.modal-content h3 {
+  font-size: 1.25rem;
+  color: #E63B2E;
+  margin: 2rem 0 .5rem;
+}
+
+.modal-content p {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 2rem;
+}
+
+.modal-content .btn-primary {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.loader {
+  margin: 0 0 2em;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.loader.active {
+  visibility: visible;
+}
+
+.backdrop {
+  background-color: rgba(27, 27, 30, 0.7);
+}
+
+.hero {
+  background: url(../images/hero.jpg) bottom center/cover no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-position: center center;
+    background-size: 100%;
+  }
+}
+
+.hero .backdrop {
+  padding: 8rem 1.8rem 7rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .backdrop {
+    padding: 9rem;
+  }
+}
+
+.hero h1 {
+  text-align: center;
+  margin: 1.2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero h1 {
+    width: 500px;
+  }
+}
+
+.hero p {
+  color: #FBFFFE;
+  margin: 1em 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero p {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .cta {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+.search-recipes {
+  position: relative;
+}
+
+.home form {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 80%;
+  margin-left: calc(80%/ -2);
+  background: -webkit-gradient(linear, right bottom, left top, from(#1B1B1E), to(#E63B2E));
+  background: linear-gradient(to top left, #1B1B1E, #E63B2E);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .home form {
+    padding: 1rem 2rem;
+    max-width: 700px;
+    margin-left: -350px;
+  }
+}
+
+.home form input {
+  background-color: #FBFFFE;
+  margin-bottom: 1rem;
+}
+
+.home form .btn-primary {
+  width: 100%;
+}
+
+.home form.error input {
+  margin-bottom: .3rem;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control div {
+  position: absolute;
+  top: 4px;
+  right: .5rem;
+}
+
+.form-control .alert {
+  margin-bottom: 1.3rem;
+}
+
+.home .recipes-container {
+  padding: 7rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .home .recipes-container {
+    padding: 5rem;
+  }
+}
+
+.home .recipes-container h2 {
+  text-align: center;
+  color: #1B1B1E;
+}
+
+.home.active .content {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.home.active .recipes-container {
+  padding: 3rem 0;
+}
+
+.banner {
+  background: url(../images/banner.jpg) 0% 75%/cover no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    background-position: 0% 65%;
+  }
+}
+
+.banner h1 {
+  font-size: 1.8rem;
+  padding: 7rem 5%;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner h1 {
+    font-size: 3.125rem;
+    padding: 10rem 0;
+  }
+}
+
+.search-recipes span {
+  font-size: 0.875rem;
+  color: #FBFFFE;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.search-recipes .btn-primary {
+  margin: 0 auto;
+}
+
+.recipes-container {
+  background-color: #EEEEEE;
+  padding: 3rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipes-container {
+    padding: 10rem 0;
+  }
+}
+
+.recipes-container h2 {
+  text-align: center;
+  color: #E63B2E;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .contact > div {
+    padding: 5rem 10%;
+  }
+}
+
+.contact-form {
+  padding: 3rem 1.8rem;
+  background-color: #EEEEEE;
+}
+
+.contact-form h1 {
+  color: #1B1B1E;
+  text-align: center;
+}
+
+.contact-form p {
+  color: #E63B2E;
+  text-align: center;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-form input, .contact-form textarea {
+  margin: 1rem 0 1.5rem;
+}
+
+.contact-form .btn-primary {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.contact-info {
+  background-color: #E63B2E;
+  color: #FBFFFE;
+  padding: 3rem 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.contact-info h2 {
+  margin-bottom: 1em;
+}
+
+.contact-info h3 {
+  font-size: 1rem;
+}
+
+.contact-info .socials {
+  margin-top: 2rem;
+}
+
+.contact-info .social-icons {
+  margin: 0;
+}
+
+.contact-info .social-icons a:hover {
+  color: #1B1B1E;
+}

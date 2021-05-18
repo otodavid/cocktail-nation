@@ -1,0 +1,15 @@
+.loader{
+    margin: 0 0 2em;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    // padding: 1em;
+    // margin: 0 auto 1em;
+    display: inline-block;
+    // vertical-align: top;
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+  }
