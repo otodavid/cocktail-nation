@@ -1,3 +1,5 @@
+@import 'abstracts';
+
 header {
     height: 90px;
 
@@ -6,7 +8,7 @@ header {
     }
 }
 
-.header-nav {
+.headerNav {
     @include flex($align: flex-start);
     position: fixed;
     width: 100%;
@@ -50,7 +52,7 @@ header {
             @include flex();
         }
 
-        &-item {
+        &Item {
             padding: 1rem 1.7rem;
             transform: translateX(-100vw);
             transition: .4s ease;
@@ -68,10 +70,14 @@ header {
             }
         }
 
-        &-link {
+        &Link {
             color: $gray;
             font-size: 1.5rem;
             text-transform: uppercase;
+
+            &.active {
+                color: $red;
+            }
 
             @include media-lg {
                 font-size: 1rem;
@@ -84,7 +90,7 @@ header {
         }
     }
 
-    .menu-toggle {
+    .menuToggle {
         position: relative;
         width: 30px;
         height: 15px;
@@ -132,7 +138,7 @@ header {
 
 // variable transition delay for each menu item
 @for $i from 1 through 3 {
-    .menu-item:nth-child(#{$i}) {
+    .menuItem:nth-child(#{$i}) {
         transition-delay: ($i * 0.15s);
     }
 }
