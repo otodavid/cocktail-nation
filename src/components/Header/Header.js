@@ -1,30 +1,55 @@
 import './Header.scss';
+import logo from '../../assets/logo.svg';
+import { useState } from 'react';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <header>
-            <nav className="headerNav">
+            <div className="content">
                 <div className="logo">
                     <a href="index.html">
-                        <img src="./images/Logo.svg" alt="Cocktail Nation Logo" />
+                        <img src={logo} alt="Cocktail Nation Logo" />
                     </a>
                 </div>
+                
+                <nav className={
+                    `header-nav 
+                    ${isMenuOpen ? "open" : ""}`
+                    }
+                >
+                    <ul className="menu">
+                        <li className={`
+                            menu-item
+                            ${isMenuOpen ? "open" : ""}`
+                        }>
+                            <a href="index.html" className="menu-link active">Home
+                            </a>
+                        </li>
+                        <li className={`
+                            menu-item
+                            ${isMenuOpen ? "open" : ""}`
+                        }>
+                            <a href="index.html" className="menu-link">Recipes
+                            </a>
+                        </li>
+                        <li className={`
+                            menu-item
+                            ${isMenuOpen ? "open" : ""}`
+                        }>
+                            <a href="index.html" className="menu-link">Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-                <ul className="menu">
-                    <li className="menuItem">
-                        <a href="index.html" className="menuLink active">Home
-                        </a>
-                    </li>
-                    <li className="menuItem">
-                        <a href="recipes.html" className="menuLink">recipes</a>
-                    </li>
-                    <li className="menuItem">
-                        <a href="contact.html" className="menuLink">contact</a>
-                    </li>
-                </ul>
-
-                <button type="button" className="menuToggle"></button>
-            </nav>
+                <button 
+                    type="button" 
+                    className={`menuToggle ${isMenuOpen ? "open" : "" }`}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                ></button>
+            </div>
         </header>
     )
 }
