@@ -1,6 +1,6 @@
 import './Header.scss';
 import logo from '../../assets/logo.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -10,7 +10,6 @@ const Header = () => {
         {name: "home", path: "/"},
         {name: "recipes", path: "/recipes"},
         {name: "contact", path: "/contact"},
-        
     ]
 
     return (
