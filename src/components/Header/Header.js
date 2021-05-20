@@ -1,10 +1,17 @@
 import './Header.scss';
 import logo from '../../assets/logo.svg';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const navLinks = [
+        {name: "home", path: "/"},
+        {name: "recipes", path: "/recipes"},
+        {name: "contact", path: "/contact"},
+        
+    ]
 
     return (
         <header>
@@ -21,27 +28,21 @@ const Header = () => {
                     }
                 >
                     <ul className="menu">
-                        <li className={`
-                            menu-item
-                            ${isMenuOpen ? "open" : ""}`
-                        }>
-                            <Link to="/" className="menu-link active">Home
-                            </Link>
-                        </li>
-                        <li className={`
-                            menu-item
-                            ${isMenuOpen ? "open" : ""}`
-                        }>
-                            <Link to="/recipes" className="menu-link">Recipes
-                            </Link>
-                        </li>
-                        <li className={`
-                            menu-item
-                            ${isMenuOpen ? "open" : ""}`
-                        }>
-                            <Link to="/contact" className="menu-link">Contact
-                            </Link>
-                        </li>
+
+                        {navLinks.map((nav, index) => (
+                            <li 
+                                className={`menu-item ${isMenuOpen ? "open" : ""}`}
+                                key={index}
+                            >
+                                <NavLink to={nav.path} 
+                                    className="menu-link"
+                                    exact
+                                    activeClassName="active"
+                                >
+                                    {nav.name}
+                                </NavLink>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
