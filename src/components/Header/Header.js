@@ -1,6 +1,7 @@
 import './Header.scss';
 import logo from '../../assets/logo.svg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +10,9 @@ const Header = () => {
         <header>
             <div className="content">
                 <div className="logo">
-                    <a href="index.html">
+                    <Link to="/">
                         <img src={logo} alt="Cocktail Nation Logo" />
-                    </a>
+                    </Link>
                 </div>
                 
                 <nav className={
@@ -24,22 +25,22 @@ const Header = () => {
                             menu-item
                             ${isMenuOpen ? "open" : ""}`
                         }>
-                            <a href="index.html" className="menu-link active">Home
-                            </a>
+                            <Link to="/" className="menu-link active">Home
+                            </Link>
                         </li>
                         <li className={`
                             menu-item
                             ${isMenuOpen ? "open" : ""}`
                         }>
-                            <a href="index.html" className="menu-link">Recipes
-                            </a>
+                            <Link to="/recipes" className="menu-link">Recipes
+                            </Link>
                         </li>
                         <li className={`
                             menu-item
                             ${isMenuOpen ? "open" : ""}`
                         }>
-                            <a href="index.html" className="menu-link">Contact
-                            </a>
+                            <Link to="/contact" className="menu-link">Contact
+                            </Link>
                         </li>
                     </ul>
                 </nav>

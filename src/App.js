@@ -1,27 +1,23 @@
-import { BrowserRouter } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 import { Header } from "./components/Header";
-import test from "./components/test";
-import test2 from "./components/test2";
 import './App.scss';
-
-const { Route, Switch } = require("react-router");
+import Home from "./pages/Home";
+import Recipes from "./pages/Recipes";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="App">
-    <Header />
-    <BrowserRouter>
-      <div>
-        <Switch>
-          <Route exact path="/" component={test} />
-          <Route path="/test2" component={test2} />
-        </Switch>
-      </div>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/recipes" component={Recipes} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
       
       <main></main>
       
       <footer></footer>
-      </BrowserRouter>
     </div>
   );
 }
