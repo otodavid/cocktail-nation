@@ -6,12 +6,12 @@
 }
 
 body {
-    font-family: $font-body;
-    font-size: $mobile-font;
+    font-family: $ff-body;
+    font-size: $fs-mobile;
     line-height: 1.5;
 
     @include media-lg {
-        font-size: $desktop-font;
+        font-size: $fs-desktop;
     }
 }
 
@@ -41,14 +41,13 @@ h1, h2, h3, h4 {
     margin-bottom: .5em;
 
     span {
-        color: $secondary;
-
+        color: $primary;
     }
 }
 
 h1 {
     font-size: 2.2rem;
-    line-height: 1;
+    line-height: 1.1;
     text-transform: uppercase;
     color: $light;
 

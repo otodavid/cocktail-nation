@@ -1,0 +1,33 @@
+@import 'abstracts';
+
+.hero {
+    background-color: $dark;
+    padding-top: 7rem;
+    position: relative;
+
+    &-image {
+        width: 80%;
+        margin: 3rem auto 0;
+        position: relative;
+        z-index: 2;
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.hero-content {
+    color: $light;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+        width: 40ch;
+        margin: 0 auto;
+    }
+}
+
+.slant-div {
+}

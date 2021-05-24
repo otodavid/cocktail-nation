@@ -1,0 +1,12 @@
+@import 'abstracts';
+
+.btn {
+    padding: .6rem 1.2rem;
+    background-color: $primary;
+    color: $light;
+    font-size: $fs-mobile;
+    font-family: $ff-body;
+    text-transform: uppercase;
+    font-weight: $fw-light;
+    margin-top: 1rem;
+}

@@ -1,14 +1,14 @@
 @import 'abstracts';
 
 header {
-    position: sticky;
+    // position: sticky;
 }
 
 .content {
     @include flex();
     position: relative;
     width: 100%;
-    background-color: $black;
+    background-color: $text;
     padding: .8rem 2.5rem .8rem .4rem;
 
     @include media-md {
@@ -38,10 +38,11 @@ header {
 }
 
 .header-nav {
-    background-color: $black;
+    background-color: $text;
     position: absolute;
     left: 0;
     top: 65px;
+    z-index: 5;
     width: 100%;
     height: 0;
     transition: height .4s ease;
@@ -98,7 +99,7 @@ header {
 
     &-link {
         color: $gray;
-        font-size: $mobile-font;
+        font-size: $fs-mobile;
         text-transform: capitalize;
         position: relative;
 
@@ -110,7 +111,7 @@ header {
                left: 0;
                width: 70%;
                height: 2px;
-               background-color: $red;
+               background-color: $primary;
            }
         }
 
@@ -119,7 +120,7 @@ header {
             transition: .4s ease-in-out;
 
             &:hover {
-                color: $red;
+                color: $primary;
             }
         }
     }

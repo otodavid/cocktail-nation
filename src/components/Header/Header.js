@@ -37,6 +37,7 @@ const Header = () => {
                                     className="menu-link"
                                     exact
                                     activeClassName="active"
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     {nav.name}
                                 </NavLink>
