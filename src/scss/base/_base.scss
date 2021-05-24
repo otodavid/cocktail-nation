@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: $font-stack;
+    font-family: $font-body;
     font-size: $mobile-font;
     line-height: 1.5;
 
@@ -36,6 +36,16 @@ ul {
     list-style-type: none;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;;
+    margin-bottom: .5em;
+
+    span {
+        color: $secondary;
+
+    }
+}
+
 h1 {
     font-size: 2.2rem;
     line-height: 1;
@@ -46,15 +56,10 @@ h1 {
         font-size: 3rem;
         line-height: 1.1;
     }
-
-    span {
-        color: $secondary;
-    }
 }
 
 h2 {
     font-size: 1.5rem;
-    text-transform: uppercase;
 
     @include media-lg {
         font-size: 1.8rem;

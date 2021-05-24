@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
-
-$font-stack: 'Exo 2', Roboto, sans-serif;
+$font-heading: 'Playfair Display', Helvetica, serif;
+$font-body: 'Source Sans Pro', Garamond, sans-serif;
 
 $mobile-font: .875rem;
 $desktop-font: 1rem;
 
-$fw-light: 400;
-$fw-normal: 500;
-$fw-medium: 600;
-$fw-bold: 700;
-$fw-boldest: 800; 
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 800;
