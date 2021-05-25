@@ -1,0 +1,27 @@
+@import 'abstracts';
+
+.recipes {
+    background-color: $dark;
+    border-bottom: 1px solid rgba($gray, .3);
+    padding-bottom: 2rem;
+}
+
+form {
+    flex: 100%;
+    text-align: left;
+    padding: 0 1rem;
+    background-color: rgba($dark, .8);
+    padding: 2rem;
+}
+
+.formGroup {
+    position: relative;
+    flex: 1 1 100%;
+
+    button {
+        position: absolute;
+        right: 10px;
+        bottom: 4px;
+        color: $light;
+    }
+}

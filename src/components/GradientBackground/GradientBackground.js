@@ -1,10 +1,10 @@
 import './GradientBackground.scss';
 
-const GradientBackground = ({ bgImage, children }) => {
+const GradientBackground = ({ height, bgImage, children }) => {
     return (
         <div 
             className="gradient-bg"
-            style={{backgroundImage: `url(${bgImage})` }}    
+            style={{backgroundImage: `url(${bgImage})`, height: height }}    
         >
             <div>
                 {children}
