@@ -1,6 +1,7 @@
 @import 'abstracts';
 
 .btn {
+    display: block;
     padding: .6rem 1.2rem;
     background-color: $primary;
     color: $light;

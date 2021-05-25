@@ -13,6 +13,8 @@
 
         img {
             width: 80%;
+            display: block;
+            margin: 0 auto;
         }
     }
 }
@@ -27,7 +29,51 @@
         width: 40ch;
         margin: 0 auto;
     }
+
+    button {
+        @include center
+    }
 }
 
-.slant-div {
+%heading2 {
+    position: relative;
+    width: max-content;
+    @include center;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        left: -10px;
+        bottom: -7px;
+        width: 60%;
+        height: 2px;
+        background-color: $primary;
+    }
+}
+
+.tools-highlight {
+    padding: 2rem 0 9rem;
+    position: relative;
+
+    h2 {
+        @extend %heading2;
+    }
+
+    button {
+        @include center;
+    }
+}
+
+.top-recipes {
+    background-color: $dark;
+
+    h2 {
+        @extend %heading2; 
+        color: $light;
+        padding-top: 2rem;
+    }
+
+    button {
+        @include center;
+    }
 }

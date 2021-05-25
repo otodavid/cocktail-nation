@@ -12,6 +12,12 @@
     transition: all $duration ease-out;
 }
 
+// center block element
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 // MEDIA QUERIES
 // small devices like galaxy fold

@@ -1,10 +1,10 @@
 import styles from './SlantContainer.module.scss';
 
-const SlantContainer = ({pos}) => {
+const SlantContainer = ({pos, bgColor}) => {
     return (
         <div 
             className={styles.div}
-            style={{bottom: pos}}    
+            style={{bottom: pos, backgroundColor: bgColor}}    
         > 
         </div>
     )
