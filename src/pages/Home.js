@@ -6,6 +6,7 @@ import { RecipeContainer } from '../components/RecipeContainer';
 import { GradientBackground } from '../components/GradientBackground';
 import './Home.scss';
 import pic from '../assets/banner.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -16,7 +17,9 @@ const Home = () => {
                     <p>
                         Why go out to get a couple of drinks when you can make your own elegant cocktails at home? You ready?
                     </p>
-                    <Button className="btn">view recipes</Button>
+                    <Link to="/recipes">
+                        <Button className="btn">view recipes</Button>
+                    </Link>
                 </div>
                 <div className="hero-image">
                     <img src={image} alt="Red cocktail in a glass cup"/>
@@ -27,9 +30,11 @@ const Home = () => {
             <section className="tools-highlight">
                 <h2>Get the right <span>tools</span></h2>
                 <ToolsContainer numberOfTools={3} />
-                <Button className="btn">
-                    view all
-                </Button>
+                <Link to="/tools">
+                    <Button className="btn">
+                        view all
+                    </Button>
+                </Link>
 
                 <SlantContainer bgColor="#303134" pos={0} />
             </section>
@@ -37,9 +42,11 @@ const Home = () => {
             <section className="top-recipes">
                 <h2>Top <span>recipes</span></h2>
                 <RecipeContainer />
-                <Button className="btn">
-                    view more
-                </Button>
+                <Link to="/recipes">
+                    <Button className="btn">
+                        view more
+                    </Button>
+                </Link>
             </section>
 
             <GradientBackground bgImage={pic}>

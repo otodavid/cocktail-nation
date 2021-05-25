@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import styles from './Footer.module.scss';
 
@@ -6,17 +7,19 @@ const Footer = () => {
         <footer>
             <div className={styles.footerTop}>
                 <div className={styles.logo}>
-                    <img src={logo} alt="Cocktail Nation Logo"/>
+                    <Link to="/">
+                        <img src={logo} alt="Cocktail Nation Logo"/>
+                    </Link>
                 </div>
                 <ul className={styles.nav}>
                     <li>
-                        <a href="">Recipe</a>
+                        <Link to="/recipes">Recipe</Link>
                     </li>
                     <li>
-                        <a href="">Tools</a>
+                        <Link to="/tools">Tools</Link>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
                 <div className={styles.socials}>
