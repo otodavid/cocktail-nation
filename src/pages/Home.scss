@@ -52,7 +52,7 @@
 }
 
 .tools-highlight {
-    padding: 2rem 0 9rem;
+    padding: 5rem 0 9rem;
     position: relative;
 
     h2 {
@@ -66,6 +66,7 @@
 
 .top-recipes {
     background-color: $dark;
+    padding: 2rem 0 4rem;
 
     h2 {
         @extend %heading2; 
@@ -77,3 +78,4 @@
         @include center;
     }
 }
+

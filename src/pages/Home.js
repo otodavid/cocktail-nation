@@ -1,9 +1,11 @@
 import image from '../assets/hero-image.png';
 import { Button } from '../components/Button';
 import { SlantContainer } from '../components/SlantContainer';
-import { ToolsContainer } from '../components/ToolsContainer'
-import { RecipeContainer } from '../components/RecipeContainer'
+import { ToolsContainer } from '../components/ToolsContainer';
+import { RecipeContainer } from '../components/RecipeContainer';
+import { GradientBackground } from '../components/GradientBackground';
 import './Home.scss';
+import pic from '../assets/banner.jpg';
 
 const Home = () => {
     return (
@@ -34,12 +36,15 @@ const Home = () => {
 
             <section className="top-recipes">
                 <h2>Top <span>recipes</span></h2>
-                
                 <RecipeContainer />
                 <Button className="btn">
                     view more
                 </Button>
             </section>
+
+            <GradientBackground bgImage={pic}>
+                <h2>Try a deliciously elegant <span>cocktail</span> now</h2>
+            </GradientBackground>
         </div>
     )
 }
