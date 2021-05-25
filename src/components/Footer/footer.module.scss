@@ -1,0 +1,52 @@
+@import 'abstracts';
+
+footer {
+    background-color: $dark;
+}
+
+.footerTop {
+    padding: 1.5rem 2rem;
+    @include flex();
+    gap: 1rem;
+
+    a {
+        color: $light;
+    }
+}
+
+.logo {
+    flex-basis: 100px;
+    margin-left: -10px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.nav {
+    flex-basis: 150px;
+    @include flex;
+}
+
+.socials {
+    flex-basis: 100%;
+    @include flex(flex-start);
+    gap: 15px;
+
+    & a:first-of-type {
+        // margin-right: 20px;
+    }
+}
+
+.footerBottom {
+    background-color: $light;
+    padding: 1rem;
+    
+    p {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
