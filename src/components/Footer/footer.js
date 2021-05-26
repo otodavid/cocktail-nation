@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import styles from './Footer.module.scss';
+import logo from '../../assets/logo.svg';
 
 const Footer = () => {
     return (
-        <footer>
+        <div>
+            <footer>
             <div className={styles.footerTop}>
                 <div className={styles.logo}>
                     <Link to="/">
@@ -37,6 +38,7 @@ const Footer = () => {
                 </p>
             </div>
         </footer>
+        </div>
     )
 }
 
