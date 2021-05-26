@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import { Header } from "./components/Header";
-import { Footer } from './components/Footer/Footer';
+// import { Footer } from './components/Footer/Footer';
 import './App.scss';
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
@@ -21,7 +21,7 @@ function App() {
         </Switch>
       </main>
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
