@@ -1,4 +1,4 @@
-import './Header.scss';
+import styles from './Header.module.scss';
 import logo from '../../assets/logo.svg';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
@@ -15,29 +15,29 @@ const Header = () => {
 
     return (
         <header>
-            <div className="content">
-                <div className="logo">
+            <div className={styles.content}>
+                <div className={styles.logo}>
                     <Link to="/">
                         <img src={logo} alt="Cocktail Nation Logo" />
                     </Link>
                 </div>
                 
-                <nav className={
-                    `header-nav 
-                    ${isMenuOpen ? "open" : ""}`
+                <nav className={`
+                    ${styles.headerNav} 
+                    ${isMenuOpen ? styles.open : ""}`
                     }
                 >
-                    <ul className="menu">
+                    <ul className={styles.menu}>
 
                         {navLinks.map((nav, index) => (
                             <li 
-                                className={`menu-item ${isMenuOpen ? "open" : ""}`}
+                                className={`${styles.menuItem} ${isMenuOpen ? styles.open : ""}`}
                                 key={index}
                             >
                                 <NavLink to={nav.path} 
-                                    className="menu-link"
+                                    className={styles.menuLink}
                                     exact
-                                    activeClassName="active"
+                                    activeClassName={styles.active}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {nav.name}
@@ -49,7 +49,7 @@ const Header = () => {
 
                 <button 
                     type="button" 
-                    className={`menuToggle ${isMenuOpen ? "open" : "" }`}
+                    className={`${styles.menuToggle} ${isMenuOpen ? styles.open : "" }`}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 ></button>
             </div>
