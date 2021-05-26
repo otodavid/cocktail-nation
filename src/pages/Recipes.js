@@ -20,7 +20,7 @@ const Recipes = () => {
                <p>
                 Search for your favorite recipe or try something new with our up-to-date recipes
                </p>
-               <Form>
+               <Form className={styles.form}>
                     <div className={styles.formGroup}>
                         <label htmlFor="Search name">Search name</label>
                         <input ref={inputRef} type="text"/>

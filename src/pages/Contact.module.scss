@@ -1,0 +1,77 @@
+@import 'abstracts';
+
+.contact {
+    background-color: $gray;
+}
+
+.content {
+    width: 80%;
+    @include center;
+    transform: translateY(-6rem);
+}
+
+.sendMessage {
+    background-color: $light;
+    padding: 2rem 2rem 4rem;
+
+    header {
+        @include flex;
+        color: $text;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        margin-left: auto;
+    }
+}
+
+.formGroup {
+    margin-bottom: 1.7rem;
+
+    label {
+        color: rgba($text, .7);
+        margin-bottom: .3rem;
+
+        &.active {
+            color: $text;
+        }
+    }
+
+    input,
+    textarea {
+        border-bottom: 1px solid rgba($dark, .5);
+        color: $text;
+
+        &:focus {
+            border-bottom-color: $dark;
+        }
+    }
+}
+
+.contactInfo {
+    background-color: $dark;
+    color: $light;
+    padding: 2rem;
+}
+
+.infoItem {
+    @include flex($align: flex-start);
+
+    p {
+        flex: 0 1 85%;
+    }
+}
+
+.socials {
+    margin: 2rem 0;
+
+    & .icons {
+        @include flex;
+        width: 60px;
+
+        & i {
+            font-size: 20px;
+            color: $light;
+        }
+    }
+}

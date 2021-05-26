@@ -8,7 +8,7 @@
     color: $light;
 
     & > div {
-        @include flex();
+        @include flex(center, center, column);
         padding: 2rem;
         background: rgba($dark, .8);
         width: 100%;

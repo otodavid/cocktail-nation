@@ -23,10 +23,10 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className={styles.socials}>
-                    <a href="">
+                    <a href="www.google.com">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a href="">
+                    <a href="www.google.com">
                         <i className="fab fa-twitter"></i>
                     </a>
                 </div>
