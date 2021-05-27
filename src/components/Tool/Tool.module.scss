@@ -5,10 +5,21 @@
         margin-bottom: 2rem;
         border-bottom: 1px solid $gray;
     }
+
+    @include media-md {
+        @include flex;
+        flex-wrap: nowrap;
+        gap: 2rem;
+
+        &:not(:last-of-type) {
+            border-bottom: 0;
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 .cardImage {
-    background-color: $gray;
+    background-color: $dark;
     height: 200px;
     padding: 1rem 0;
 
@@ -16,9 +27,34 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+
+        @include media-md {
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    @include media-md {
+        flex: 1 1 35%;
+        height: 270px;
+        @include flex(center);
     }
 }
 
 .cardContent {
     padding: 1.5rem 0;
+
+    h3 {
+        color: $primary;
+    }
+
+    @include media-md {
+        flex: 1 1 65%;
+        padding: 0;
+        @include flex(center, flex-start, column);
+
+        p {
+            margin-bottom: 0;
+        }
+    }
 }

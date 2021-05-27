@@ -24,7 +24,7 @@ const Home = () => {
                 <div className="hero-image">
                     <img src={image} alt="Red cocktail in a glass cup"/>
                 </div>
-                <SlantContainer pos={0} bgColor="#FBFFFE" />
+                <SlantContainer pos="-1px" />
             </section>
 
             <section className="tools-highlight">
@@ -36,7 +36,7 @@ const Home = () => {
                     </Button>
                 </Link>
 
-                <SlantContainer bgColor="#303134" pos={0} />
+                <SlantContainer bgColor="#303134" pos="-1px" />
             </section>
 
             <section className="top-recipes">
@@ -50,7 +50,7 @@ const Home = () => {
             </section>
 
             <GradientBackground bgImage={pic}>
-                <h2>Try a deliciously elegant <span>cocktail</span> now</h2>
+                <h1>Try a deliciously elegant <span>cocktail</span> now</h1>
             </GradientBackground>
         </div>
     )

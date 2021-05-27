@@ -7,7 +7,8 @@
     color: $light;
     font-size: $fs-mobile;
     font-family: $ff-body;
-    text-transform: uppercase;
-    font-weight: $fw-light;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-weight: $fw-semibold;
     margin-top: 1rem;
 }

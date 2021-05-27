@@ -9,6 +9,9 @@ body {
     font-family: $ff-body;
     font-size: $fs-mobile;
     line-height: 1.5;
+    font-weight: $fw-normal;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @include media-lg {
         font-size: $fs-desktop;
@@ -37,8 +40,9 @@ ul {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Source Sans Pro', sans-serif;;
+    font-family: $ff-heading;
     margin-bottom: .5em;
+    text-transform: capitalize;
 
     span {
         color: $primary;
@@ -46,23 +50,21 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, calc(1.5714rem + 2.1429vw), 3.5rem);
     line-height: 1.1;
-    text-transform: uppercase;
     color: $light;
 
     @include media-lg {
-        font-size: 3rem;
         line-height: 1.1;
     }
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.65rem, calc(1.2643rem + 1.9286vw), 2.85rem);
+}
 
-    @include media-lg {
-        font-size: 1.8rem;
-    }
+h3 {
+    font-size: clamp(1.3rem, calc(1.2872rem + 0.6809vw), 1.9rem);
 }
 
 p {

@@ -8,11 +8,11 @@
     padding: .8rem 2.5rem .8rem .4rem;
 
     @include media-md {
-        padding: 1rem 3rem 1rem 2rem;
+        padding: 1% 7%;
     }
 
     @include media-lg {
-        padding: 2% 5rem 2% 3rem;
+        // padding: 2% 5rem 2% 3rem;
         align-items: center;
     }
 }
@@ -54,13 +54,10 @@
     @include media-md {
         position: static;
         transition: none;
-        flex: 0 1 250px;
+        flex: 0 1 350px;
         height: auto;
     }
 
-    @include media-lg {
-        flex-basis: 300px;
-    }
 }
 
 .menu {

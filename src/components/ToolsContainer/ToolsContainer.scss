@@ -1,5 +1,12 @@
+@import 'abstracts';
+
 .tools-container {
     width: 80%;
     max-width: 1000px;
     margin: 3rem auto 1rem;
+
+    @include media-md {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
 }

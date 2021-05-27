@@ -5,12 +5,17 @@ footer {
 }
 
 .footerTop {
+    @include flex;
+    @include center;
     padding: 1.5rem 2rem;
-    @include flex();
-    gap: 1rem;
+    gap: 3rem;
 
     a {
         color: $light;
+    }
+
+    @include media-md {
+        padding: 1% 7%;
     }
 }
 
@@ -22,20 +27,44 @@ footer {
         height: 100%;
         width: 100%;
     }
+
+    @include media-md {
+        flex-basis: 130px;
+    }
 }
 
 .nav {
-    flex-basis: 150px;
+    flex-basis: 170px;
     @include flex;
+
+    a {
+        font-size: $fs-mobile;
+        @include transition(.3s);
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    @include media-md {
+        flex-basis: 200px;
+    }
 }
 
 .socials {
-    flex-basis: 100%;
-    @include flex(flex-start);
-    gap: 15px;
+    flex-basis: 50px;
+    @include flex;
 
-    & a:first-of-type {
-        // margin-right: 20px;
+    & a {
+        @include transition(.3s);
+
+        &:first-of-type {
+            font-size: 20px;
+        }
+
+        &:hover {
+            color: $primary;
+        }
     }
 }
 
@@ -46,7 +75,7 @@ footer {
     p {
         text-align: center;
         margin-bottom: 0;
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 

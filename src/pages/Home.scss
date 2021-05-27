@@ -17,6 +17,28 @@
             margin: 0 auto;
         }
     }
+
+    @include media-md {
+        @include flex;
+        flex-wrap: nowrap;
+        padding: 5rem 0 5rem 9%;
+        @include center;
+
+        &-image {
+            flex: 1 1 40%;
+            margin-top: 0;
+            margin-left: 0;
+            max-width: 374px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-lg {
+        padding: 2rem 0 2rem 9%;
+    }
 }
 
 .hero-content {
@@ -25,13 +47,43 @@
     margin: 0 auto;
     text-align: center;
 
-    p {
-        width: 40ch;
-        margin: 0 auto;
+    h1, p, button {
+        @include center;
     }
 
-    button {
-        @include center
+    h1 {
+        letter-spacing: 1px;
+        max-width: 16ch;
+    }
+
+    p {
+        max-width: 50ch;
+    }
+
+    @include media-md {
+        flex: 1 1 60%;
+        text-align: left;
+        max-width: 560px;
+        margin-left: 0;
+
+
+        h1 {
+            @include left-align;
+        }
+
+        p {
+            @include left-align;
+            font-size: 18px;
+        }
+
+        button {
+            @include left-align;
+            margin-top: 1.5rem;
+        }
+    }
+
+    @include media-lg {
+        // flex: ;
     }
 }
 
@@ -79,3 +131,10 @@
     }
 }
 
+.gradient-bg {
+    height: 400px;
+
+    h1 {
+        max-width: 22ch;
+    }
+}
