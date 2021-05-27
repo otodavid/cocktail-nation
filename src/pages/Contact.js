@@ -17,15 +17,14 @@ const Contact = () => {
     
     return (
         <div className={styles.contact}>
-            <GradientBackground
-                bgImage={contactPic}
-                height="350px"    
-            >
-                <h2><span>Contact</span> us</h2>
-                <p>
-                    Don't be shy to ask questions. Please contact us by phone or email.
-                </p>        
-            </GradientBackground>
+            <div className={styles.backgroundOverlay}>
+                <div className={styles.intro}>
+                    <h2><span>Contact</span> us</h2>
+                    <p>
+                        Don't be shy to ask questions. Please contact us by phone or email.
+                    </p>        
+                </div>
+            </div>
 
             <div className={styles.content}>
                 <div className={styles.sendMessage}>

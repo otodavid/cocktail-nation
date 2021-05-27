@@ -15,12 +15,12 @@ const Recipes = () => {
 
     return (
         <div className={styles.recipes}>
-            <GradientBackground height="300px" bgImage={recipePic}>
+            <GradientBackground bgImage={recipePic}>
                <h2>Search <span>Cocktails</span></h2>
                <p>
                 Search for your favorite recipe or try something new with our up-to-date recipes
                </p>
-               <Form className={styles.form}>
+               <form className={styles.form}>
                     <div className={styles.formGroup}>
                         <label htmlFor="Search name">Search name</label>
                         <input ref={inputRef} type="text"/>
@@ -30,10 +30,14 @@ const Recipes = () => {
                             </svg>
                         </Button>
                     </div>
-               </Form>
+               </form>
             </GradientBackground>
 
-            <RecipeContainer />
+            <div className={styles.allRecipes}>
+                <h3>All <span>Recipes</span></h3>
+                <RecipeContainer />
+
+            </div>
         </div>
     )
 }

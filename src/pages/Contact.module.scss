@@ -4,15 +4,59 @@
     background-color: $gray;
 }
 
+.backgroundOverlay {
+    height: 350px;
+    width: 100%;
+    background: url("../assets/contact.jpg");
+
+    @include media-md {
+        height: 500px;   
+    }
+    
+
+    .intro {
+        height: 100%;
+        width: 100%;
+        background-color: rgba($dark, .8);
+        padding-top: 4rem;
+        color: $light;
+        text-align: center;
+
+        p {
+            max-width: 40ch;
+            @include center;
+        }
+    }
+}
+
 .content {
     width: 80%;
     @include center;
-    transform: translateY(-6rem);
+    transform: translateY(-8rem);
+
+    @include media-md {
+        margin-top: -8rem;
+        width: 70%;
+    }
+
+    @include media-lg {
+        width: 80%;
+        margin-top: -6rem;
+        display:grid;
+        grid-template-columns: 1fr .85fr;
+        max-width: 900px;
+        box-shadow: 5px 8px 15px rgba($dark, .4);
+    }
 }
 
 .sendMessage {
     background-color: $light;
     padding: 2rem 2rem 4rem;
+
+    @include media-md {
+        flex: 1 1 60%;
+        padding: 3rem 3rem 4rem;
+    }
 
     header {
         @include flex;
@@ -52,13 +96,18 @@
     background-color: $dark;
     color: $light;
     padding: 2rem;
+
+    @include media-md {
+        flex: 1 1 40%;
+        padding: 3rem 3rem 4rem;
+    }
 }
 
 .infoItem {
     @include flex($align: flex-start);
 
     p {
-        flex: 0 1 85%;
+        flex: 0 1 87%;
     }
 }
 
