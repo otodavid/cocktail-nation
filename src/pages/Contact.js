@@ -1,6 +1,4 @@
-import { GradientBackground } from '../components/GradientBackground';
 import styles from './Contact.module.scss';
-import contactPic from '../assets/contact.jpg';
 import { Form } from '../components/Form';
 import { Button } from '../components/Button';
 

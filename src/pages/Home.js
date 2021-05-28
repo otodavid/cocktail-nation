@@ -9,6 +9,9 @@ import pic from '../assets/banner.jpg';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+    // const modal = useContext(ModalContext);
+    // console.log(modal);
+
     return (
         <div className="home">
             <section className="hero">

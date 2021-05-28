@@ -1,6 +1,5 @@
 import { GradientBackground } from "../components/GradientBackground";
 import recipePic from '../assets/recipe.jpg'
-import {Form} from "../components/Form";
 import { Button } from '../components/Button';
 import { RecipeContainer } from '../components/RecipeContainer'
 import styles from './Recipes.module.scss';
