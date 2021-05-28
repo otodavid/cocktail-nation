@@ -15,7 +15,7 @@ export const recipeData = [
     },
     {
         id: 3,
-        name: "Blieberry Vodka",
+        name: "Blueberry Vodka",
         image: pic3,
     }
 ]

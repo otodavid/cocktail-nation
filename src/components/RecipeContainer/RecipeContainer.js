@@ -1,25 +1,25 @@
 import styles from './RecipeContainer.module.scss';
-import { recipeData } from './data'
 import { RecipeCard } from '../RecipeCard';
-import { useContext, useEffect } from 'react';
-import { ModalContext } from '../../App';
+import { useContext } from 'react';
+import { SingleDataContext, ModalContext, RecipesDataContext } from '../../App';
 
 const RecipeContainer = () => {
-    useEffect(() => {
-        
-        return () => {
-            // cleanup
-        }
-    }, [])
+    const { setIsModalOpen } = useContext(ModalContext);
 
-    const { isModalOpen, setIsModalOpen } = useContext(ModalContext);
+    const { setSingleData } = useContext(SingleDataContext);
 
+    const { recipesData } = useContext(RecipesDataContext);
+    
     return (
         <div className={styles.container}>
-            {recipeData.map(recipe => (
+
+            { recipesData && recipesData.map(recipe => (
                 <div 
-                    key={recipe.id} 
-                    onClick={() => setIsModalOpen(true)}
+                    key={recipe.idDrink} 
+                    onClick={() => {
+                        setIsModalOpen(true)
+                        setSingleData(recipe)    
+                    }}
                 >
                     <RecipeCard data={recipe}  />
                 </div>
