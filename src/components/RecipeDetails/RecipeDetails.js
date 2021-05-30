@@ -17,7 +17,7 @@ const RecipeDetails = () => {
 
     const convertedArray = Object.entries(singleData);    
     let ingredients = [];
-    convertedArray.map(arr => {
+    convertedArray.forEach(arr => {
         if(!arr.includes(null) && arr[0].startsWith("strIngredient")) {
             ingredients.push(arr[1]);
         }

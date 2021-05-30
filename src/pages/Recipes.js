@@ -3,7 +3,7 @@ import recipePic from '../assets/recipe.jpg'
 import { Button } from '../components/Button';
 import { RecipeContainer } from '../components/RecipeContainer'
 import styles from './Recipes.module.scss';
-import { createContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
 
@@ -15,8 +15,6 @@ const Recipes = () => {
     useEffect(() => {
         inputRef.current.focus();
     }, []);
-
-    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -61,7 +59,7 @@ const Recipes = () => {
                 <div className={styles.allRecipes}>
                     <h3>All <span>Recipes</span></h3>
 
-                    <RecipeContainer />
+                    <RecipeContainer searchedData={data} />
                 </div>
             </div>
     )

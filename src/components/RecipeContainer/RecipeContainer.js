@@ -3,7 +3,7 @@ import { RecipeCard } from '../RecipeCard';
 import { useContext } from 'react';
 import { SingleDataContext, ModalContext, RecipesDataContext } from '../../App';
 
-const RecipeContainer = () => {
+const RecipeContainer = ({ searchedData }) => {
     const { setIsModalOpen } = useContext(ModalContext);
 
     const { setSingleData } = useContext(SingleDataContext);
@@ -12,18 +12,31 @@ const RecipeContainer = () => {
     
     return (
         <div className={styles.container}>
-
-            { recipesData && recipesData.map(recipe => (
-                <div 
-                    key={recipe.idDrink} 
-                    onClick={() => {
-                        setIsModalOpen(true)
-                        setSingleData(recipe)    
-                    }}
-                >
-                    <RecipeCard data={recipe}  />
-                </div>
-            ))}
+            { searchedData && searchedData.length > 0 ? (
+                searchedData.map(recipe => (
+                    <div 
+                        key={recipe.idDrink} 
+                        onClick={() => {
+                            setIsModalOpen(true)
+                            setSingleData(recipe)    
+                        }}
+                    >
+                        <RecipeCard data={recipe}  />
+                    </div>
+                ))
+            ) : (
+                recipesData.map(recipe => (
+                    <div 
+                        key={recipe.idDrink} 
+                        onClick={() => {
+                            setIsModalOpen(true)
+                            setSingleData(recipe)    
+                        }}
+                    >
+                        <RecipeCard data={recipe}  />
+                    </div>
+            ))
+            )}
         </div>
     )
 }
