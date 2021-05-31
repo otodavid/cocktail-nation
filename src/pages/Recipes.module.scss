@@ -23,6 +23,7 @@
 .formGroup {
     position: relative;
     flex: 1 1 100%;
+    height: 76px;
 
     label {
         color: rgba($gray, .7);
@@ -31,27 +32,22 @@
     input {
         margin-bottom: .3rem;
         border-bottom: 1px solid rgba($gray, .5);
+        color: $light;
 
         &:focus {
             border-bottom: 1px solid $light;
-            color: $light;
         }
     }
 
     small {
-        visibility: hidden;
         color: $primary;
         font-size: 12px;
-
-        &.error {
-            visibility: visible;
-        }
     }
 
     button {
         position: absolute;
         right: 7px;
-        top: 23px;
+        top: 27px;
         color: $light;
     }
 }
