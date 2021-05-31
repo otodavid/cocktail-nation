@@ -62,33 +62,14 @@
         @include flex;
         color: $text;
         margin-bottom: 1rem;
+
+        i {
+            font-size: clamp(1.3rem, calc(1.2872rem + 0.6809vw), 1.9rem)
+        }
     }
 
     button {
         margin-left: auto;
-    }
-}
-
-.formGroup {
-    margin-bottom: 1.7rem;
-
-    label {
-        color: rgba($text, .7);
-        margin-bottom: .3rem;
-
-        &.active {
-            color: $text;
-        }
-    }
-
-    input,
-    textarea {
-        border-bottom: 1px solid rgba($dark, .5);
-        color: $text;
-
-        &:focus {
-            border-bottom-color: $dark;
-        }
     }
 }
 

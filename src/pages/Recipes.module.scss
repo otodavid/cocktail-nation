@@ -24,8 +24,18 @@
     position: relative;
     flex: 1 1 100%;
 
+    label {
+        color: rgba($gray, .7);
+    }
+
     input {
         margin-bottom: .3rem;
+        border-bottom: 1px solid rgba($gray, .5);
+
+        &:focus {
+            border-bottom: 1px solid $light;
+            color: $light;
+        }
     }
 
     small {
