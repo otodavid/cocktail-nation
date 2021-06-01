@@ -3,6 +3,7 @@ import styles from "./Form.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import emailjs from 'emailjs-com';
 
 const schema = yup.object().shape({
   name: yup.string().required("Please tell us your name"),
@@ -19,7 +20,21 @@ const Form = () => {
     resolver: yupResolver(schema),
   });
 
-  const formSubmit = (data) => alert("Thank you for reaching out");
+  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+  console.log(templateID, serviceID, userID);
+  
+  const formSubmit = (data, e) => {
+    emailjs.sendForm(serviceID, templateID, e.target, userID)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      e.target.reset(); 
+  };
 
   const activeField = (e) => {
     const label = e.target.parentElement.firstElementChild;
