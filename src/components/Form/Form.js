@@ -3,7 +3,7 @@ import styles from "./Form.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const schema = yup.object().shape({
   name: yup.string().required("Please tell us your name"),
@@ -11,7 +11,7 @@ const schema = yup.object().shape({
   userMessage: yup.string().required("This field cannot be empty"),
 });
 
-const Form = () => {
+const Form = ({ setIsFormSubmitted }) => {
   const {
     register,
     handleSubmit,
@@ -24,16 +24,19 @@ const Form = () => {
   const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const userID = process.env.REACT_APP_EMAILJS_USER_ID;
   console.log(templateID, serviceID, userID);
-  
-  const formSubmit = (data, e) => {
-    emailjs.sendForm(serviceID, templateID, e.target, userID)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
 
-      e.target.reset(); 
+  const formSubmit = (data, e) => {
+    emailjs.sendForm(serviceID, templateID, e.target, userID).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+
+    e.target.reset();
+    setIsFormSubmitted(true);
   };
 
   const activeField = (e) => {
@@ -47,44 +50,46 @@ const Form = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
-      <div className={styles.formGroup}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          {...register("name")}
-          onFocus={activeField}
-          onBlur={inactiveField}
-        />
-        <small>{errors.name?.message}</small>
-      </div>
-      <div className={styles.formGroup}>
-        <label htmlFor="email">Email Address</label>
-        <input
-          type="text"
-          id="email"
-          {...register("email")}
-          onFocus={activeField}
-          onBlur={inactiveField}
-        />
-        <small>{errors.email?.message}</small>
-      </div>
-      <div className={styles.formGroup}>
-        <label htmlFor="userMessage">How can we help you?</label>
-        <textarea
-          id="userMessage"
-          rows="3"
-          {...register("userMessage")}
-          onFocus={activeField}
-          onBlur={inactiveField}
-        />
-        <small>{errors.userMessage?.message}</small>
-      </div>
-      <Button type="submit" className="btn">
-        Send
-      </Button>
-    </form>
+    <>
+      <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
+        <div className={styles.formGroup}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            {...register("name")}
+            onFocus={activeField}
+            onBlur={inactiveField}
+          />
+          <small>{errors.name?.message}</small>
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email">Email Address</label>
+          <input
+            type="text"
+            id="email"
+            {...register("email")}
+            onFocus={activeField}
+            onBlur={inactiveField}
+          />
+          <small>{errors.email?.message}</small>
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="userMessage">How can we help you?</label>
+          <textarea
+            id="userMessage"
+            rows="3"
+            {...register("userMessage")}
+            onFocus={activeField}
+            onBlur={inactiveField}
+          />
+          <small>{errors.userMessage?.message}</small>
+        </div>
+        <Button type="submit" className="btn">
+          Send
+        </Button>
+      </form>
+    </>
   );
 };
 

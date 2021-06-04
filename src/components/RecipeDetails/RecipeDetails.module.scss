@@ -10,6 +10,7 @@
     left: 0;
     z-index: 10;
     padding: 3rem 0rem 4rem;
+    backdrop-filter: blur(5px);
 
     /* Hide scrollbar for IE, Edge and Firefox */
     overflow: auto;
@@ -25,7 +26,7 @@
         transform: translateY(-100vh);
 
         & .cocktail {
-            animation: modalOut .3s linear forwards;
+            animation: modalOut .4s linear forwards;
         }
     }
 
@@ -33,7 +34,7 @@
         transform: translate(0vh);
 
         & .cocktail {
-            animation: modalIn .3s cubic-bezier(0,1.95,1,1) forwards;
+            animation: modalIn .4s cubic-bezier(0,1.95,1,1) forwards;
         }
     }
 }

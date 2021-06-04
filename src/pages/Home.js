@@ -19,7 +19,7 @@ const Home = () => {
         <section className="hero">
           <div className="hero-content">
             <h1>
-              homemade <span>coctails</span> can be better
+              homemade <span>cocktails</span> can be better
             </h1>
             <p>
               Why go out to get a couple of drinks when you can make your own

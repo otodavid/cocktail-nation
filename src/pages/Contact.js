@@ -2,8 +2,12 @@ import styles from "./Contact.module.scss";
 import { Form } from "../components/Form";
 import { Button } from "../components/Button";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { Modal } from "../components/Modal";
 
 const Contact = () => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   return (
     <>
       <Helmet>
@@ -28,7 +32,7 @@ const Contact = () => {
               <h3>Send Message</h3>
               <i className="far fa-envelope"></i>
             </header>
-            <Form />
+            <Form setIsFormSubmitted={setIsFormSubmitted} />
           </div>
 
           <div className={styles.contactInfo}>
@@ -89,6 +93,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      { isFormSubmitted ? (
+        <Modal modalState="open" setIsFormSubmitted={setIsFormSubmitted} />
+      ) : (
+        <Modal modalState="closed" />
+      )}
     </>
   );
 };

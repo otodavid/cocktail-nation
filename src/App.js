@@ -18,6 +18,7 @@ function App() {
   const [ isModalOpen, setIsModalOpen ] = useState(false);
   const [singleData, setSingleData] = useState({});
   const [recipesData, setRecipesData] = useState([]);
+  
 
   useEffect(() => {
     fetchData();

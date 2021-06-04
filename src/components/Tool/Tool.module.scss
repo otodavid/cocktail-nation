@@ -15,6 +15,14 @@
             border-bottom: 0;
             margin-bottom: 3rem;
         }
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+
+            & .cardImage {
+                background-color: $gray;
+            }
+        }
     }
 }
 

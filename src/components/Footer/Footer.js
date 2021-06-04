@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 <ul className={styles.nav}>
                     <li>
-                        <Link to="/recipes">Recipe</Link>
+                        <Link to="/recipes">Recipes</Link>
                     </li>
                     <li>
                         <Link to="/tools">Tools</Link>
