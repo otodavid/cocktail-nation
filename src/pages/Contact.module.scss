@@ -7,7 +7,7 @@
 .backgroundOverlay {
     height: 350px;
     width: 100%;
-    background: url("../assets/contact.jpg");
+    background: url("../assets/contact.jpg") center / cover no-repeat;
 
     @include media-md {
         height: 500px;   
