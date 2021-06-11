@@ -34,7 +34,7 @@ const heroImgVariant = {
 const Home = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: .2,
+    threshold: 0.2,
   });
   const animation = useAnimation();
 
@@ -44,7 +44,7 @@ const Home = () => {
           y: 0,
           opacity: 1,
           transition: {
-            duration: .7,
+            duration: 0.7,
             ease: "easeInOut",
           },
         })
