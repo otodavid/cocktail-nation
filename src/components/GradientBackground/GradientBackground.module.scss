@@ -3,7 +3,7 @@
 .gradientBg {
     width: 100%;
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     color: $light;
     height: 300px;
 
@@ -22,6 +22,7 @@
         }
 
         p {
+            width: 80%;
             max-width: 50ch;
             text-align: center;
         }

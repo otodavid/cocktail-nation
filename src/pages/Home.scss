@@ -57,7 +57,9 @@
     }
 
     p {
+        width: 80%;
         max-width: 50ch;
+        margin-bottom: 2.2rem;
     }
 
     @include media-md {

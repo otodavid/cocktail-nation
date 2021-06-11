@@ -5,6 +5,15 @@
     background-color: $dark;
     border-bottom: 1px solid rgba($gray, .3);
     padding-bottom: 2rem;
+
+    // target the GradientBackground component
+    & > div:first-child > div:first-child {
+        height: 400px;
+
+        @include media-md {
+            height: 450px;
+        }
+    }
 }
 
 .form {

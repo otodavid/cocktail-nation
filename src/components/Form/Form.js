@@ -23,7 +23,6 @@ const Form = ({ setIsFormSubmitted }) => {
   const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const userID = process.env.REACT_APP_EMAILJS_USER_ID;
-  console.log(templateID, serviceID, userID);
 
   const formSubmit = (data, e) => {
     emailjs.sendForm(serviceID, templateID, e.target, userID).then(

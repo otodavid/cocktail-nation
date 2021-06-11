@@ -4,6 +4,8 @@ import { Button } from "../components/Button";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { Modal } from "../components/Modal";
+import { motion } from "framer-motion";
+import { introChildVariants, introVariants, pageVariants, scaleUpVariant } from "../animations";
 
 const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -13,20 +15,29 @@ const Contact = () => {
       <Helmet>
         <title>Cocktail Nation | Contact Us</title>
       </Helmet>
-      <div className={styles.contact}>
+      <motion.div
+        className={styles.contact}
+        variants={pageVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
         <div className={styles.backgroundOverlay}>
-          <div className={styles.intro}>
-            <h2>
+          <motion.div className={styles.intro} variants={introVariants}>
+            <motion.h2 variants={introChildVariants}>
               <span>Contact</span> us
-            </h2>
-            <p>
+            </motion.h2>
+            <motion.p variants={introChildVariants}>
               Don't be shy to ask questions. Please contact us by phone or
               email.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
 
-        <div className={styles.content}>
+        <motion.div
+          className={styles.content}
+          variants={scaleUpVariant}
+        >
           <div className={styles.sendMessage}>
             <header>
               <h3>Send Message</h3>
@@ -91,10 +102,10 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      { isFormSubmitted ? (
+      {isFormSubmitted ? (
         <Modal modalState="open" setIsFormSubmitted={setIsFormSubmitted} />
       ) : (
         <Modal modalState="closed" />
