@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion, useAnimation } from "framer-motion";
 import { pageVariants, introVariants, introChildVariants } from "../animations";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const heroImgVariant = {
@@ -31,12 +31,15 @@ const heroImgVariant = {
   },
 };
 
-const Home = () => {
+const Home = ({ setImgLoaded }) => {
+  const [isLoaded, setIsLoaded] = useState(true);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
   const animation = useAnimation();
+
+  
 
   useEffect(() => {
     inView
@@ -88,7 +91,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
           >
-            <img src={image} alt="Red cocktail in a glass cup" loading="lazy" />
+            <img src={image} alt="Red cocktail in a glass cup" />
           </motion.div>
           <SlantContainer pos="-1px" />
         </section>
