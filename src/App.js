@@ -9,9 +9,9 @@ import { Footer } from "./components/Footer";
 import { createContext, useEffect, useState } from "react";
 import { RecipeDetails } from "./components/RecipeDetails";
 import axios from "axios";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import PageNavigationListener from "./utils/PageNavigationListener";
-import {Loader} from "./components/Loader";
+import { Loader } from "./components/Loader";
 
 export const ModalContext = createContext();
 export const SingleDataContext = createContext();
@@ -32,6 +32,7 @@ function App() {
     setIsLoaded(false);
   };
 
+  // remove loader once page loads
   useEffect(() => {
     window.addEventListener("load", removeLoader);
 
@@ -66,17 +67,18 @@ function App() {
             >
               <SingleDataContext.Provider value={{ singleData, setSingleData }}>
                 <main>
-                  <AnimatePresence exitBeforeEnter>
-                    <Switch location={location} key={location.key}>
-                      <Route exact path="/" component={Home} />
-                      <Route path="/recipes" component={Recipes} />
-                      <Route path="/tools" component={Tools} />
-                      <Route path="/contact" component={Contact} />
-                    </Switch>
-                  </AnimatePresence>
+                  <AnimateSharedLayout type="crossfade">
+                    <AnimatePresence exitBeforeEnter onExitComplete={() => setIsModalOpen(false)}>
+                      <Switch location={location} key={location.key}>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/recipes" component={Recipes} />
+                        <Route path="/tools" component={Tools} />
+                        <Route path="/contact" component={Contact} />
+                      </Switch>
+                      <RecipeDetails />
+                    </AnimatePresence>
+                  </AnimateSharedLayout>
                 </main>
-
-                <RecipeDetails />
               </SingleDataContext.Provider>
             </RecipesDataContext.Provider>
           </ModalContext.Provider>
