@@ -1,17 +1,16 @@
 import image from "../assets/hero-image.png";
 import { Button } from "../components/Button";
-import { SlantContainer } from "../components/SlantContainer";
-import { ToolsContainer } from "../components/ToolsContainer";
-import { RecipeContainer } from "../components/RecipeContainer";
-import { GradientBackground } from "../components/GradientBackground";
+import { ToolsList } from "../components/ToolsList";
+import { RecipesList } from "../components/RecipesList";
 import "./Home.scss";
 import pic from "../assets/banner.jpg";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion, useAnimation } from "framer-motion";
 import { pageVariants, introVariants, introChildVariants } from "../animations";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { Box } from "../components/Box";
 
 const heroImgVariant = {
   hidden: {
@@ -31,15 +30,12 @@ const heroImgVariant = {
   },
 };
 
-const Home = ({ setImgLoaded }) => {
-  const [isLoaded, setIsLoaded] = useState(true);
+const Home = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
   const animation = useAnimation();
-
-  
 
   useEffect(() => {
     inView
@@ -93,36 +89,36 @@ const Home = ({ setImgLoaded }) => {
           >
             <img src={image} alt="Red cocktail in a glass cup" />
           </motion.div>
-          <SlantContainer pos="-1px" />
+          <Box type="slantBox" pos="-1px" />
         </section>
 
         <section className="tools-highlight" ref={ref}>
           <h2>
             Get the right <span>tools</span>
           </h2>
-          <ToolsContainer numberOfTools={3} animation={animation} />
+          <ToolsList numberOfTools={3} animation={animation} />
           <Link to="/tools">
             <Button className="btn">view all</Button>
           </Link>
 
-          <SlantContainer bgColor="#303134" pos="-1px" />
+          <Box type="slantBox" bgColor="#303134" pos="-1px" />
         </section>
 
         <section className="top-recipes">
           <h2>
             Top <span>recipes</span>
           </h2>
-          <RecipeContainer />
+          <RecipesList />
           <Link to="/recipes">
             <Button className="btn">view more</Button>
           </Link>
         </section>
 
-        <GradientBackground bgImage={pic}>
+        <Box type="backgroundBox" bgImage={pic}>
           <h1>
             Try a deliciously elegant <span>cocktail</span> now
           </h1>
-        </GradientBackground>
+        </Box>
       </motion.div>
     </>
   );

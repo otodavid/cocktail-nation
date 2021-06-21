@@ -1,4 +1,4 @@
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation, Link } from "react-router-dom";
 import { Header } from "./components/Header";
 import "./App.scss";
 import Home from "./pages/Home";
@@ -68,15 +68,18 @@ function App() {
               <SingleDataContext.Provider value={{ singleData, setSingleData }}>
                 <main>
                   <AnimateSharedLayout type="crossfade">
-                    <AnimatePresence exitBeforeEnter onExitComplete={() => setIsModalOpen(false)}>
+                    <AnimatePresence
+                      exitBeforeEnter
+                      onExitComplete={() => setIsModalOpen(false)}
+                    >
                       <Switch location={location} key={location.key}>
                         <Route exact path="/" component={Home} />
                         <Route path="/recipes" component={Recipes} />
                         <Route path="/tools" component={Tools} />
                         <Route path="/contact" component={Contact} />
                       </Switch>
-                      <RecipeDetails />
                     </AnimatePresence>
+                    <RecipeDetails />
                   </AnimateSharedLayout>
                 </main>
               </SingleDataContext.Provider>

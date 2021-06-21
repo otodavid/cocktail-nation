@@ -43,7 +43,7 @@ const modalDetails = {
     transition: {
       type: "spring",
       ease: "easeInOut",
-      mass: .6,
+      mass: 0.6,
       stiffnenss: 100,
       delay: 0.3,
     },
@@ -55,8 +55,7 @@ const RecipeDetails = () => {
   const { singleData } = useContext(SingleDataContext);
 
   const closeModal = (e) => {
-    e.target.classList.contains("close-modal")
-      && setIsModalOpen(false)
+    e.target.classList.contains("close-modal") && setIsModalOpen(false);
   };
 
   const steps =
@@ -73,7 +72,7 @@ const RecipeDetails = () => {
   });
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence>
       {isModalOpen && (
         <motion.div
           className={`${styles.dropShadow} close-modal`}
@@ -84,16 +83,16 @@ const RecipeDetails = () => {
           exit="hidden"
         >
           <motion.div className={styles.modal} variants={modalVariant}>
-          {/* Modal header */}
+            {/* Modal header */}
             <header>
               <h3>{singleData.name || singleData.strDrink}</h3>
               <Button onClick={closeModal}>
                 <i className="fas fa-times close-modal"></i>
               </Button>
             </header>
-            
+
             <div className={styles.details}>
-            {/* Modal Image */}
+              {/* Modal Image */}
               <div className={styles.detailsImage}>
                 <motion.img
                   src={singleData.image || singleData.strDrinkThumb}
@@ -101,9 +100,8 @@ const RecipeDetails = () => {
                   layoutId={singleData.idDrink}
                   transition={{ duration: 0.4 }}
                 />
-                
               </div>
-              
+
               {/* Steps and Ingredients */}
               <motion.div
                 className={styles.detailsIngredients}
@@ -118,7 +116,7 @@ const RecipeDetails = () => {
                   ))}
                 </ul>
               </motion.div>
-              
+
               <motion.div
                 className={styles.detailsSteps}
                 variants={modalDetails}

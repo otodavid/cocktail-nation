@@ -1,6 +1,15 @@
 @import 'abstracts';
 
-.gradientBg {
+.slantBox {
+    width: 100%;
+    background-color: $light;
+    height: 150px;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    left: 0;
+}
+
+.backgroundBox {
     width: 100%;
     background-position: center center;
     background-size: cover;

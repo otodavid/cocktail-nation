@@ -1,6 +1,5 @@
-import { GradientBackground } from "../components/GradientBackground";
 import toolsPic from "../assets/tools.jpg";
-import { ToolsContainer } from "../components/ToolsContainer";
+import { ToolsList } from "../components/ToolsList";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import {
@@ -9,6 +8,7 @@ import {
   introChildVariants,
   contentFadeInVariant,
 } from "../animations";
+import { Box } from "../components/Box";
 
 const Tools = () => {
   return (
@@ -23,7 +23,7 @@ const Tools = () => {
         exit="hidden"
       >
         <motion.div variants={introVariants}>
-          <GradientBackground bgImage={toolsPic}>
+          <Box type="backgroundBox" bgImage={toolsPic}>
             <motion.h2 variants={introChildVariants}>
               Basic <span>Tools</span>
             </motion.h2>
@@ -32,11 +32,11 @@ const Tools = () => {
               cocktail. Bartenders use a variety of unusual tools that make them
               appear to be lab scientists
             </motion.p>
-          </GradientBackground>
+          </Box>
         </motion.div>
 
         <motion.div variants={contentFadeInVariant}>
-          <ToolsContainer numberOfTools={9} />
+          <ToolsList numberOfTools={9} />
         </motion.div>
       </motion.div>
     </>

@@ -1,7 +1,7 @@
-import { GradientBackground } from "../components/GradientBackground";
+import { Box } from "../components/Box";
 import recipePic from "../assets/recipe.jpg";
 import { Button } from "../components/Button";
-import { RecipeContainer } from "../components/RecipeContainer";
+import { RecipesList } from "../components/RecipesList";
 import styles from "./Recipes.module.scss";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
@@ -69,7 +69,7 @@ const Recipes = () => {
         exit="hidden"
       >
         <motion.div variants={introVariants}>
-          <GradientBackground bgImage={recipePic}>
+          <Box type="backgroundBox" bgImage={recipePic}>
             <motion.h2 variants={introChildVariants}>
               Search <span>Cocktails</span>
             </motion.h2>
@@ -111,7 +111,7 @@ const Recipes = () => {
                 </Button>
               </div>
             </motion.form>
-          </GradientBackground>
+          </Box>
         </motion.div>
 
         <div className={styles.allRecipes}>
@@ -127,7 +127,7 @@ const Recipes = () => {
             <p className={styles.error}> {error} </p>
           ) : (
             <motion.div variants={contentFadeInVariant}>
-              <RecipeContainer searchedData={data} />
+              <RecipesList searchedData={data} />
             </motion.div>
           )}
         </div>

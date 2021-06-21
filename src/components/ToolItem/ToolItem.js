@@ -1,10 +1,8 @@
-import styles from "./Tool.module.scss";
+import styles from "./ToolItem.module.scss";
 
-const Tool = ({ data }) => {
+const ToolItem = ({ data }) => {
   return (
-    <div
-      className={styles.card}
-    >
+    <div className={styles.card}>
       <div className={styles.cardImage}>
         <img src={data.image} alt={data.imageAlt} />
       </div>
@@ -16,4 +14,4 @@ const Tool = ({ data }) => {
   );
 };
 
-export default Tool;
+export default ToolItem;

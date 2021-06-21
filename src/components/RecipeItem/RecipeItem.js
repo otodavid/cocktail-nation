@@ -1,14 +1,11 @@
-import styles from "./RecipeCard.module.scss";
+import styles from "./RecipeItem.module.scss";
 import { motion } from "framer-motion";
 
-const RecipeCard = ({ data }) => {
+const RecipeItem = ({ data }) => {
   return (
     <>
       <figure className={styles.card}>
-        <motion.div
-          className={styles.cardImage}
-          layoutId={data.idDrink}
-        >
+        <motion.div className={styles.cardImage} layoutId={data.idDrink}>
           <img src={data.strDrinkThumb} alt={data.strDrink} />
         </motion.div>
 
@@ -22,4 +19,4 @@ const RecipeCard = ({ data }) => {
   );
 };
 
-export default RecipeCard;
+export default RecipeItem;
