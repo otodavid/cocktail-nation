@@ -1,108 +1,108 @@
-@import 'abstracts';
+@import '../scss/abstracts';
 
 .contact {
-    background-color: $gray;
+  background-color: $gray;
 }
 
 .backgroundOverlay {
-    height: 350px;
+  height: 350px;
+  width: 100%;
+  background: url('../assets/contact.jpg') center / cover no-repeat;
+
+  @include media-md {
+    height: 500px;
+  }
+
+  .intro {
+    height: 100%;
     width: 100%;
-    background: url("../assets/contact.jpg") center / cover no-repeat;
+    background-color: rgba($dark, 0.8);
+    padding-top: 4rem;
+    color: $light;
+    text-align: center;
 
-    @include media-md {
-        height: 500px;   
+    p {
+      width: 70%;
+      max-width: 40ch;
+      @include center;
     }
-
-    .intro {
-        height: 100%;
-        width: 100%;
-        background-color: rgba($dark, .8);
-        padding-top: 4rem;
-        color: $light;
-        text-align: center;
-
-        p {
-            width: 70%;
-            max-width: 40ch;
-            @include center;
-        }
-    }
+  }
 }
 
 .content {
+  width: 80%;
+  @include center;
+  position: relative;
+  top: -8rem;
+
+  @include media-md {
+    margin-top: -8rem;
+    width: 70%;
+  }
+
+  @include media-lg {
     width: 80%;
-    @include center;
-    position: relative;
-    top: -8rem;
+    margin-top: -6rem;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    max-width: 900px;
+    box-shadow: 5px 8px 15px rgba($dark, 0.4);
+  }
 
-    @include media-md {
-        margin-top: -8rem;
-        width: 70%;
-    }
-
-    @include media-lg {
-        width: 80%;
-        margin-top: -6rem;
-        display:grid;
-        grid-template-columns: 1fr .85fr;
-        max-width: 900px;
-        box-shadow: 5px 8px 15px rgba($dark, .4);
-    }
-
-    img {
-        width: 20px;
-    }
+  img {
+    width: 20px;
+  }
 }
 
 .sendMessage {
-    background-color: $light;
-    padding: 2rem 2rem 4rem;
+  background-color: $light;
+  padding: 2rem 2rem 4rem;
 
-    @include media-md {
-        flex: 1 1 60%;
-        padding: 3rem 3rem 4rem;
+  @include media-md {
+    flex: 1 1 60%;
+    padding: 3rem 3rem 4rem;
+  }
+
+  header {
+    @include flex;
+    color: $text;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: clamp(1.3rem, calc(1.2872rem + 0.6809vw), 1.9rem);
     }
-
-    header {
-        @include flex;
-        color: $text;
-        margin-bottom: 1rem;
-
-        i {
-            font-size: clamp(1.3rem, calc(1.2872rem + 0.6809vw), 1.9rem)
-        }
-    }
+  }
 }
 
 .contactInfo {
-    background-color: $dark;
-    color: $light;
-    padding: 2rem;
+  background-color: $dark;
+  color: $light;
+  padding: 2rem;
 
-    @include media-md {
-        flex: 1 1 40%;
-        padding: 3rem 3rem 4rem;
-    }
+  @include media-md {
+    flex: 1 1 40%;
+    padding: 3rem 3rem 4rem;
+  }
 }
 
 .infoItem {
-    @include flex($align: flex-start);
+  @include flex($align: flex-start);
 
-    p {
-        flex: 0 1 87%;
-    }
+  p {
+    flex: 0 1 87%;
+  }
 }
 
 .socials {
-    margin: 2rem 0;
+  margin: 2rem 0;
 
-    & .icons {
-        @include flex;
-        width: 60px;
+  & .icons {
+    @include flex;
+    width: 60px;
 
-        & i {
-            font-size: 20px;
-            color: $light;
-        }
+    & i {
+      font-size: 20px;
+      color: $light;
     }
+  }
 }
