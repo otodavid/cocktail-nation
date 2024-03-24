@@ -1,8 +1,8 @@
 // import config files
-@import 'abstracts';
+@use './scss/abstracts';
 
 // import vendors
-@import 'vendors/normalize';
+@use './scss/vendors/normalize';
 
 // import base
-@import 'base/base';
+@use './scss/base/base';

@@ -1,14 +1,14 @@
-@import 'abstracts';
+@import '../../scss/abstracts';
 
 .btn {
-    display: block;
-    padding: .6rem 1.2rem;
-    background-color: $primary;
-    color: $light;
-    font-size: $fs-mobile;
-    font-family: $ff-body;
-    text-transform: capitalize;
-    font-weight: 600;
-    font-weight: $fw-semibold;
-    margin-top: 1rem;
+  display: block;
+  padding: 0.6rem 1.2rem;
+  background-color: $primary;
+  color: $light;
+  font-size: $fs-mobile;
+  font-family: $ff-body;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-weight: $fw-semibold;
+  margin-top: 1rem;
 }
