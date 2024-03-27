@@ -1,25 +1,25 @@
-import { Box } from "../components/Box";
-import recipePic from "../assets/recipe.jpg";
-import { Button } from "../components/Button";
-import { RecipesList } from "../components/RecipesList";
-import styles from "./Recipes.module.scss";
-import { useEffect, useRef, useState } from "react";
-import axios from "axios";
-import { useForm } from "react-hook-form";
-import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
+import { Box } from '../components/Box';
+import recipePic from '../assets/recipe.jpg';
+import { Button } from '../components/Button';
+import { RecipesList } from '../components/RecipesList';
+import styles from './Recipes.module.scss';
+import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
 import {
   contentFadeInVariant,
   introChildVariants,
   introVariants,
   pageVariants,
   scaleUpVariant,
-} from "../animations";
+} from '../animations';
 
 const Recipes = () => {
   const inputRef = useRef(null);
   const [data, setData] = useState([]);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   useEffect(() => {
     inputRef.current.focus();
@@ -47,13 +47,15 @@ const Recipes = () => {
           );
         } else {
           setData(res.data.drinks);
-          setError("");
+          setError('');
         }
       })
       .catch((err) => {
         setError(err.message);
         setData(null);
       });
+
+    console.log(data);
   };
 
   return (
@@ -64,12 +66,12 @@ const Recipes = () => {
       <motion.div
         className={styles.recipes}
         variants={pageVariants}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
+        initial='hidden'
+        animate='visible'
+        exit='hidden'
       >
         <motion.div variants={introVariants}>
-          <Box type="backgroundBox" bgImage={recipePic}>
+          <Box type='backgroundBox' bgImage={recipePic}>
             <motion.h2 variants={introChildVariants}>
               Search <span>Cocktails</span>
             </motion.h2>
@@ -83,29 +85,29 @@ const Recipes = () => {
               variants={scaleUpVariant}
             >
               <div className={styles.formGroup}>
-                <label htmlFor="search">Search name</label>
+                <label htmlFor='search'>Search name</label>
                 <input
-                  id="search"
-                  type="text"
-                  {...register("search", {
-                    required: "Please search for something",
+                  id='search'
+                  type='text'
+                  {...register('search', {
+                    required: 'Please search for something',
                   })}
                   ref={inputRef}
                 />
-                <small>{errors.search?.message}</small>
-                <Button type="submit">
+                <small>{errors.search && errors.search.message}</small>
+                <Button type='submit'>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='17'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
                       strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
                     />
                   </svg>
                 </Button>
