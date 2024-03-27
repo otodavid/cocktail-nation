@@ -18,11 +18,12 @@ import {
 
 const Recipes = () => {
   const inputRef = useRef(null);
+  const [searchValue, setSearchValue] = useState('');
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    inputRef.current.focus();
+    inputRef.current.lastElementChild.focus();
   }, []);
 
   const {
@@ -54,8 +55,6 @@ const Recipes = () => {
         setError(err.message);
         setData(null);
       });
-
-    console.log(data);
   };
 
   return (
@@ -85,15 +84,17 @@ const Recipes = () => {
               variants={scaleUpVariant}
             >
               <div className={styles.formGroup}>
-                <label htmlFor='search'>Search name</label>
-                <input
-                  id='search'
-                  type='text'
-                  {...register('search', {
-                    required: 'Please search for something',
-                  })}
-                  ref={inputRef}
-                />
+                <div ref={inputRef}>
+                  <label htmlFor='search'>Search name</label>
+                  <input
+                    id='search'
+                    type='text'
+                    name='search'
+                    {...register('search', {
+                      required: 'Please search up something',
+                    })}
+                  />
+                </div>
                 <small>{errors.search && errors.search.message}</small>
                 <Button type='submit'>
                   <svg
